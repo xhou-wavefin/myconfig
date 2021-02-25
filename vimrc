@@ -14,6 +14,7 @@ Plugin 'junegunn/fzf.vim'
 " Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'rhysd/git-messenger.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
