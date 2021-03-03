@@ -118,3 +118,6 @@ nmap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<C
 
 " close buffer with \q
 nmap <leader>q :bp<cr>:bd #<cr>
+
+" json formatting
+nmap <leader>fj :%!python -m json.tool<cr>
