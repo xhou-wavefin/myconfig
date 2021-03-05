@@ -121,3 +121,7 @@ nmap <leader>q :bp<cr>:bd #<cr>
 
 " json formatting
 nmap <leader>fj :%!python -m json.tool<cr>
+
+" git open url
+nnoremap <leader>gu :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs open<CR><CR>
+
