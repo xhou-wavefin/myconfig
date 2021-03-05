@@ -15,6 +15,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rhysd/git-messenger.vim'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -111,6 +112,10 @@ set laststatus=2
 let g:tmuxline_powerline_separators = 0
 "let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'default'
+"let g:airline#extensions#tagbar#flags = 'f'  " show full tag hierarchy
+
+" tagbar
+nmap <leader>tb :TagbarToggle<CR>
 
 " Tab and shift tab cycle through buffers
 nmap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
