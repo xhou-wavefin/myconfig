@@ -123,8 +123,9 @@ nmap <leader>tb :TagbarToggle<CR>
 nmap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nmap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 
-" close buffer with \q
+" close buffer with \q close all others with \oq
 nmap <leader>q :bp<cr>:bd #<cr>
+nmap <leader>oq :%bd<bar>e#<bar>bd#<cr>
 
 " json formatting
 nmap <leader>fj :%!python -m json.tool<cr>
