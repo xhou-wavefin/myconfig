@@ -63,6 +63,8 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 set hidden "Maintain buffer data to allow undo after switching buffers
 
+set mouse=a  "Allows you to click around the text editor with your mouse to move the cursor
+
 " NERDTree
 nnoremap <C-t> :NERDTree<CR>
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
