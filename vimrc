@@ -15,7 +15,10 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rhysd/git-messenger.vim'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
