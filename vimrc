@@ -29,17 +29,11 @@ syntax enable
 " show line numbers
 set number
 
-" set tabs to have 4 spaces
-set ts=4
-
 " indent when moving to the next line while writing code
 set autoindent
 
 " expand tabs into spaces
 set expandtab
-
-" when using the >> or << commands, shift lines by 4 spaces
-set shiftwidth=4
 
 " show a visual line under the cursor's current line
 " set cursorline
@@ -57,7 +51,8 @@ set noswapfile "No swapfile
 set clipboard=unnamed "Copy paste across vim sessions"
 
 set backspace=2  "This makes the backspace key function like it does in other programs.
-
+set tabstop=2  "How much space Vim gives to a tab
+set shiftwidth=2  "Assists code formatting
 set smarttab  "Improves tabbing
 
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:· "list bad spaces
@@ -88,13 +83,13 @@ noremap <C-_> :Ag <C-R><C-W><CR>
 nmap <C-b> :Buffers<CR>
 nmap <C-h> :History<CR>
 
-" tabs 
+" tabs
 nnoremap tj  :tabnext<CR>
 nnoremap tk  :tabprev<CR>
 nnoremap tt  :tabedit<Space>
 nnoremap th  :tabfirst<CR>
 nnoremap tl  :tablast<CR>
-nnoremap td  :tabclose<CR> 
+nnoremap td  :tabclose<CR>
 
 " start relative numbering
 function! NumberToggle()
@@ -136,3 +131,11 @@ nmap <leader>fj :%!python -m json.tool<cr>
 " git open url
 nnoremap <leader>gu :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=line('.')<CR> \| xargs open<CR><CR>
 
+" quote manipulation
+:nnoremap <Leader>q" ciw""<Esc>P
+:nnoremap <Leader>q' ciw''<Esc>P
+:nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+
+" different tab space settings depends on file types
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
+autocmd Filetype js setlocal ts=2 sts=2 sw=2
