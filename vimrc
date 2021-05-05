@@ -23,6 +23,9 @@ Plugin 'tpope/vim-rhubarb'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" auto reload the changed file
+set autoread
+
 " enable syntax highlighting
 syntax enable
 
@@ -139,3 +142,4 @@ nnoremap <leader>gu :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L
 " different tab space settings depends on file types
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 autocmd Filetype js setlocal ts=2 sts=2 sw=2
+
