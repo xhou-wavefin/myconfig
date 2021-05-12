@@ -54,7 +54,7 @@ set noswapfile "No swapfile
 set clipboard=unnamed "Copy paste across vim sessions"
 
 set backspace=2  "This makes the backspace key function like it does in other programs.
-set tabstop=2  "How much space Vim gives to a tab
+" set tabstop=2  "How much space Vim gives to a tab
 set shiftwidth=2  "Assists code formatting
 set smarttab  "Improves tabbing
 
@@ -142,4 +142,8 @@ nnoremap <leader>gu :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L
 " different tab space settings depends on file types
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 autocmd Filetype js setlocal ts=2 sts=2 sw=2
+
+" insert new lines without insert mode, several lines 3\o
+nnoremap <silent> <leader>o :<C-u>call append(line("."),   repeat([""], v:count1))<CR>
+nnoremap <silent> <leader>O :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>
 
