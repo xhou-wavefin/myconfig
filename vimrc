@@ -121,8 +121,8 @@ let g:airline#extensions#tabline#formatter = 'default'
 nmap <leader>tb :TagbarToggle<CR>
 
 " Tab and shift tab cycle through buffers
-nmap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
-nmap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+nnoremap <C-l> :bn<cr>
+nnoremap <C-h> :bp<cr>
 
 " close buffer with \q close all others with \oq
 nmap <leader>q :bp<cr>:bd #<cr>
