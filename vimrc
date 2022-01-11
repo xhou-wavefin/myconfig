@@ -126,7 +126,7 @@ nmap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<C
 
 " close buffer with \q close all others with \oq
 nmap <leader>q :bp<cr>:bd #<cr>
-nmap <leader>oq :%bd<bar>e#<bar>bd#<cr>
+nmap <leader>qo :%bd<bar>e#<bar>bd#<cr>
 
 " json formatting
 nmap <leader>fj :%!python -m json.tool<cr>
