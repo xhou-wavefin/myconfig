@@ -87,12 +87,12 @@ nmap <C-b> :Buffers<CR>
 nmap <C-h> :History<CR>
 
 " tabs
-nnoremap tj  :tabnext<CR>
-nnoremap tk  :tabprev<CR>
-nnoremap tt  :tabedit<Space>
-nnoremap th  :tabfirst<CR>
-nnoremap tl  :tablast<CR>
-nnoremap td  :tabclose<CR>
+"nnoremap tj  :tabnext<CR>
+"nnoremap tk  :tabprev<CR>
+"nnoremap tt  :tabedit<Space>
+"nnoremap th  :tabfirst<CR>
+"nnoremap tl  :tablast<CR>
+"nnoremap td  :tabclose<CR>
 
 " start relative numbering
 function! NumberToggle()
