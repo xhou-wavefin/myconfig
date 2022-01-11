@@ -104,8 +104,8 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
+":au FocusLost * :set number
+":au FocusGained * :set relativenumber
 " end relative numbering
 
 "airline smart tab line
