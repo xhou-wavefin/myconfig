@@ -15,5 +15,10 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [user]
-	name = Xinyu Hou
+	name = Jerry (Xinyu Hou)
 	email = xinyuhoujerry@gmail.com
+	signingkey = D4C9A5C6028CA7DC
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[commit]
+	gpgsign = true

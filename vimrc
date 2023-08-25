@@ -19,6 +19,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
+" jedi-vim requires vim to support python3
+Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
