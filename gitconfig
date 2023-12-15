@@ -17,7 +17,7 @@
 [user]
 	name = Jerry (Xinyu Hou)
 	email = xinyuhoujerry@gmail.com
-	signingkey = D4C9A5C6028CA7DC
+	signingkey = CBE66F1012C41106
 [gpg]
 	program = /opt/homebrew/bin/gpg
 [commit]
