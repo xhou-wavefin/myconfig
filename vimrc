@@ -84,7 +84,7 @@ endif
 
 " FZF Ag search
 nmap <C-f> :Ag <CR>
-noremap <C-_> :Ag <C-R><C-W><CR>
+noremap <silent> <C-_> :Ag <C-R><C-W><CR>
 nmap <C-b> :Buffers<CR>
 nmap <C-h> :History<CR>
 
